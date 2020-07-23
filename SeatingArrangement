@@ -1,0 +1,66 @@
+using System;
+using System.Collections.Generic;
+
+namespace Practise
+{
+    class Program
+    {
+        public static void Main()
+        {
+
+            int T = 0, N = 0, rem = 0;
+
+            T = int.Parse(Console.ReadLine());
+
+            List<int> Nlist = new List<int>();
+            for (int i = 0; i < T; i++)
+            {
+                Nlist.Add(int.Parse(Console.ReadLine()));
+            }
+
+            for (int i = 0; i < Nlist.Count; i++)
+            {   
+                switch (rem = Nlist[i] % 12)
+                {
+                    case 1:
+                        Console.WriteLine("{0} {1}", Nlist[i] + 11, "WS");
+                        break;
+                    case 2:
+                        Console.WriteLine("{0} {1}", Nlist[i] + 9, "MS");
+                        break;
+                    case 3:
+                        Console.WriteLine("{0} {1}", Nlist[i] + 7, "AS");
+                        break;
+                    case 4:
+                        Console.WriteLine("{0} {1}", Nlist[i] + 5, "AS");
+                        break;
+                    case 5:
+                        Console.WriteLine("{0} {1}", Nlist[i] + 3, "MS");
+                        break;
+                    case 6:
+                        Console.WriteLine("{0} {1}", Nlist[i] + 1, "WS");
+                        break;
+                    case 7:
+                        Console.WriteLine("{0} {1}", Nlist[i] - 1, "WS");
+                        break;
+                    case 8:
+                        Console.WriteLine("{0} {1}", Nlist[i] - 3, "MS");
+                        break;
+                    case 9:
+                        Console.WriteLine("{0} {1}", Nlist[i] - 5, "AS");
+                        break;
+                    case 10:
+                        Console.WriteLine("{0} {1}", Nlist[i] - 7, "AS");
+                        break;
+                    case 11:
+                        Console.WriteLine("{0} {1}", Nlist[i] - 9, "MS");
+                        break;
+                    case 0:
+                        Console.WriteLine("{0} {1}", Nlist[i] - 11, "WS");
+                        break;
+                }
+            }
+            Console.ReadLine();
+        }
+    }
+}
